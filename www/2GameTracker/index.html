@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script defer>
+		$(document).ready(function(){
+			$('#nav-placeholder').load('../navBar.html');
+			$.getScript("./tracker.js");
+		});
+	</script>
+	<title>GameEase | Game Tracker</title>
+</head>
+<body>
+	<div class="home_content">
+		<div id="nav-placeholder"></div>
+		
+			<div class="title">
+				<div class="title2">GAME TRACKER</div>
+				<div class="bx2">
+					<i class='bx bx-menu' id="btn"></i>
+				</div>
+			</div>
+			<div class="context">
+				<!-- dropdown list -->
+				<div class="set Games">
+					<div class="setChild numGame">
+						<div class="select-box">
+							<div class="options-container ">
+								<div class="option">
+									<input type="radio" class="radio" id="League">
+									<label for="League of Legends">League of Legends</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="Valorant">
+									<label for="Valorant">Valorant</label>
+								</div>
+								<div class="option">
+									<input type="radio" class="radio" id="Dota">
+									<label for="Dota2">Dota 2</label>
+								</div>
+							</div>
+							<div class="selected">Select Your Game</div>
+						</div>
+					</div>
+				</div>
+				<div class="Clock">
+					<div class="outer-circle">
+						<div class="inner-circle">
+							<span name = "timer" class="timer" id="timerVal">00:00:00</span> 
+						</div>
+						<audio id="alert1" src="sound/alert1.mp3.opdownload"></audio>
+						<audio id="alert2" src="sound/alert2.mp3.opdownload"></audio>
+                        <audio id="alert3" src="sound/alert3.mp3.opdownload"></audio>
+                        <audio id="alert4" src="sound/alert4.mp3.opdownload"></audio>
+					</div>
+					
+				</div>
+				<div class="set clockButton">
+					<div class="setChild clockBtn">
+						<button type="button" class="reset" style="display: none;">RESET</button>
+					</div>
+					<div class="setChild clockBtn">
+						<button type="button" class="pause" style="display: none;">STOP</button>
+					</div>
+					<div class="setChild clockBtn">
+						<button type="button" class="start" style="display: none;">START</button>
+					</div>
+					<div class="setChild clockBtn">
+						<button type="button" class="save" style="display: none;">SAVE</button>
+					</div>
+				</div>
+				<input id="gameSelect" style="visibility: hidden;" value="" name="game">
+                <input id="time" style="visibility: hidden;" value="" name="time">
+			</div>
+	</div>
+
+</body>
+</html>

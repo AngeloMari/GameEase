@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <script>
+        //find day week month total
+function getWeek(date,day){
+    const week = Math.abs(Math.ceil((date - 1 - day) / 7));
+    console.log(week);
+
+    if (week == 0){return week + 1}
+    else if(week == 5){return week - 1}
+    else{return week};
+};
+let d = new Date(2022,5,2);
+const ddate = d.getDate();
+console.log(ddate);
+const dday = d.getDay();
+console.log(dday);
+
+const dweek = getWeek(ddate,dday);
+console.log("tite");
+
+console.log(dweek);
+console.log(`Date: ${ddate}, Day: ${dday}, Week: ${dweek}`);
+
+    </script>
+</body>
+</html>

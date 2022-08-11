@@ -1,0 +1,207 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+body{
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	/* overflow: hidden; */
+} 
+.home_content{
+	height: 100vh;
+	width: 100vw;
+	background: #0f0e0e;
+	transition: all 0.5s ease;
+	/* border: 5px solid peru; */
+
+}
+.title{
+	height: 70px;
+	font-weight: 500;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.bx2{
+	font-size: 30px;
+	padding-top: 15px;
+	cursor: pointer;
+}
+.title2{
+	font-size: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+}
+.context{
+	height: 90%;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	/* border: 5px solid purple; */
+}
+/* Game 1,2,3 */
+.set{
+	/* border: 5px solid chocolate; */
+	width: 80%;
+	height:10%;
+	display: flex;
+	justify-content: center;
+	margin: 0 10%;
+}
+/* .setChild{
+	border: 5px solid rosybrown;
+} */
+/* CLOCK */
+.Clock{
+	background-color: rgba(37, 37, 37, 0.5);
+	border-radius: 5px;
+	height: 70%;
+	width: 335px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.outer-circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-circle{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.inner-circle .timer{
+    color: #0B090A;
+    font-size: 43px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.animation-bg{
+    background: linear-gradient(-45deg, #ee7752, #6f3ce7, rgb(209, 92, 92), yellow);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Clock Button */
+.set.clockButton{
+	
+	/* border: 5px solid darkkhaki; */
+	width: 335px;
+	margin: 10px auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+.setChild.clockBtn{
+	/* border: 5px solid crimson; */
+	flex: 1;
+	margin: 0 5px;
+}
+button{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(26, 26, 26);
+	color: #fff;
+	cursor: pointer;
+	border-radius: 8px;
+}
+button:hover{
+	background-color: rgb(59, 59, 59);
+}
+.onMouseHover{
+	background-color: rgba(37, 37, 37, 0.5);
+}
+
+/* GAMELABEL */
+.select-box{
+	display:flex;
+	width: 350px;
+	flex-direction: column;
+	position: relative;
+}
+.select-box .options-container{
+	background-color: rgb(15, 14, 14);
+	color: #fff;
+	max-height: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.4s;
+	border-radius: 5px;
+	overflow: hidden;
+	order: 1;
+}
+.selected{
+	background: rgb(43, 43, 43);
+	border-radius: 5px;
+	margin: 5px;
+	color: #fff;
+	position: relative;
+	z-index: 0;
+	order:0
+}
+.selected::after{
+	content:"";
+	background: url("./img/arrow.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 50%;
+	width: 20px;
+	right: 10px;
+	top: 17px;
+	transition: all 0.4s;
+}
+.select-box .options-container.active{
+	max-height: 240px;
+	opacity: 1;
+}
+.select-box .options-container.active + .selected::after{
+	transform: rotateX(180deg);
+	top:5px;
+}
+.select-box .options, .selected{
+	padding: 12px 24px;
+	cursor: pointer;
+}
+.select-box label{
+	cursor: pointer;
+}
+.select-box .option:hover{
+	background: rgb(59, 59, 59);
+}
+.radio{
+	display: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>GameEase | Game Alarm</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script defer>
+		$(document).ready(function(){
+			$('#nav-placeholder').load('../navBar.html');
+			$.getScript("./dashboard.js");
+		});
+	</script>
+</head>
+<body>
+	<div class="home_content">
+		<div id="nav-placeholder"></div>
+			<div class="title">
+				<div class="title2">Dashboard</div>
+				<div class="bx2">
+					<i class='bx bx-menu' id="btn"></i>
+				</div>
+			</div>
+			<div class="context">
+				<div class="datetime">
+					<div class="time">
+						<span id="hour">00</span>:
+						<span id="minutes">00</span>:
+						<span id="seconds">00</span>
+						<span id="period">AM</span>
+					</div>
+					<div class="date">
+						<span id="dayname">Day</span>,
+						<span id="month">Month</span>,
+						<span id="daynum">00</span>,
+						<span id="year">Year</span>
+					</div>
+				</div>
+				<div class="today">Game Played</div>
+				<div class="total">
+					
+					<div class="gameRec"></div>
+					<div class="gameRec2"></div>
+					<div class="gameRec3"></div>
+					<div class="gameRec4"></div>
+					<div class="gameRec5"></div>
+					<div class="gameRec6"></div>
+					<div class="gameRec7"></div>
+					<div class="gameRec8"></div>
+					<div class="gameRec9"></div>
+					<div class="gameRec10"></div>
+					<div class="gameRec11"></div>
+					<div class="gameRec12"></div>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

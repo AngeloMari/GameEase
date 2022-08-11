@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Chart -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+	<!-- <script src="./Chart.js" defer></script> -->
+	<!-- get navBar using jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- use https: like github to bypass CORS -->
+	<script defer>
+		$(document).ready(function(){
+			$('#nav-placeholder').load('../navBar.html');
+			$.getScript("./analytics.js");
+			$.getScript("./Chart.js");
+		});
+	</script>
+	<title>GameEase | Game Alarm</title>
+</head>
+<body>
+	<div class="home_content">
+		<div id="nav-placeholder"></div>
+		
+		<div class="title">
+			<div class="title2">Analytics</div>
+			<div class="bx2">
+				<i class='bx bx-menu' id="btn"></i>
+			</div>
+		</div>
+		<div class="context">
+			<div class="chart">
+				<div class="chartSize">
+					<canvas id="daysOfWeekChart"></canvas>
+				</div>
+			</div>
+			<div class="chart">
+				<div class="chartSize">
+					<canvas id="gameLabelChart"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class="ovw">
+			<div class="ovwItems state onState">Time</div>
+			<div class="ovwCol">
+				<div class="ovwItems">Today
+					<div class="text min">0h 5min</div>
+				</div>
+				<div class="ovwItems">Week
+					<div class="text week">0h 10min</div>
+				</div>
+			</div>
+			<div class="ovwCol">
+				<div class="ovwItems">Month
+					<div class="text month">0h 15min</div>
+				</div>
+				<div class="ovwItems">Total
+					<div class="text total">0h 25min</div>
+				</div>
+			</div>
+			<div class="ovwItems state">Session</div>
+		</div>
+	</div>
+	
+</body>
+</html>

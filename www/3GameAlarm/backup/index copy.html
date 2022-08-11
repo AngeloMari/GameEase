@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/36f7824c83.js" crossorigin="anonymous" defer></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script defer>
+		$(document).ready(function(){
+			$('#nav-placeholder').load('../navBar.txt');
+			$.getScript("./Pomodoro.js");
+		});
+	</script>
+	<title>GameEase | Game Alarm</title>
+</head>
+<body>
+	<div id="nav-placeholder"></div>
+	<div class="home_content">
+		<div class="title">Pomodoro X</div>
+		<div class="context">
+			<!-- pomodoro box -->
+			<div class="pomodoro">
+				<div class="pomoBreak">
+					<button class="tabs">Pomodoro</button>
+					<button class="tabs">Break</button>
+				</div>
+				<div class="timer">
+					25:00
+				</div>
+				<div class="startBtn">
+					<button class="start">START</button>
+				</div>
+			</div> 
+			<div class="selectedTask">
+				League of Valorant 2
+			</div>
+			<!-- TASKS -->
+			<div class="tasks">
+				<div class="select-box">
+					<div class="selected">
+						<input type="text" class="inputText" placeholder="ADD A TASK">
+						<button class="plus">ADD</button>
+					</div>
+					<div class="option">
+						<input type="radio" class="radio" id="League">
+						<label for="League of Legends">League of Legends</label>
+					</div>
+					<div class="option">
+						<input type="radio" class="radio" id="Valorant">
+						<label for="Valorant">Valorant</label>
+					</div>
+					<div class="option active">
+						<input type="radio" class="radio" id="Dota">
+						<label for="Dota2">Dota 2</label>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
